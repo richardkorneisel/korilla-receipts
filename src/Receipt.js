@@ -1,33 +1,22 @@
 import React, { Component } from 'react';
 import './Receipt.css';
 
-class Receipt extends Component {
-    constructor(props) {
-        super(props);
-        this.state = receipt1;
-        console.log(this.state.person);
-    }
-
-render() {
-    return (
+function Receipt (props) {
+return (
+    <div className="Receipt">
         <div>
-            <div>
-                Person: {this.state.person}​​ <br />
-                Order:
-                    <ul>
-                        <li>{this.state.order.main}​​</li>
-                        <li>{this.state.order.protein}​​</li>
-                        <li>{this.state.order.rice}​​</li>
-                        <li>{this.state.order.sauce}​​</li>
-                        <li>{this.state.order.drink}​​</li>
-                        <li>{this.state.order.cost}​​</li>
-                    </ul>
-
-            </div>
+            <li><span>Person</span>{this.state.person}​​</li>
+                <ul>
+                    <li><span>Main</span>{this.state.order.main}​​</li>
+                    <li><span>Protein</span>{this.state.order.protein}​​</li>
+                    <li><span>Rice</span>{this.state.order.rice}​​</li>
+                    <li><span>Sauce</span>{this.state.order.sauce}​​</li>
+                    <li><span>Drink</span>{this.state.order.drink}​​</li>
+                    <li><span>Order</span>{this.state.order.cost}​​</li>
+                </ul>
         </div>
-
-        )
-    }
-}​​
+    </div>
+    )
+}
 
 export default Receipt;
